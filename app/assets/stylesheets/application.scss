@@ -1,8 +1,15 @@
 @import "bootstrap/scss/bootstrap";
 
+h1 {
+    padding-bottom: 15px;
+}
+
 img.recipe-show {
-    width: 300px;
+    width: 400px;
     height: auto;
+    align-content: center;
+    border-radius: 5pt;
+    box-shadow: 10px 10px 5px #888888;
 }
 
 .recipe-box {
@@ -15,8 +22,9 @@ img.recipe-show {
 }
 
 .recipe-box:hover {
-    height: 505px;
+    transform: scale(1.02);
     background: #9ea3a7;
+    box-shadow: 10px 10px 5px #666565;
     transition: all ease .5s;
 }
 
@@ -33,12 +41,15 @@ img.recipe-index {
 }
 
 .recipe-box li:first-child {
-    font-size: 24px;
+    font-size: 36px;
+    font-style: oblique;
 }
 
-.center {
-    text-align:center;
+.recipe-box link_to {
+    font-size: 24px;
+    font-weight: lighter;
 }
+
 
 .navbar-toggler {
     transition: all ease .5s;
@@ -48,3 +59,34 @@ img.recipe-index {
     transform: rotate(90deg);
     transition: all ease .5s;
 }
+
+.col-4 {
+    position: relative;
+    left: 0rem;
+    padding: 0px;
+}
+
+.links {
+    transition: all ease .5s;
+    text-align: center;
+    align-content: center;
+}
+
+.links:hover {
+    font-weight: 600;
+    transform: scale(1.05);
+    transition: all ease .5s;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #666565;
+}
+
+div.image {
+    align-content: center;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
