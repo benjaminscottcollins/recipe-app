@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-<h1 class="center">Recipes</h1>
+<h1 class="center">Scoot's House of Recipes</h1>'
   <div class="row">
     <% @recipes.each do |recipe| %>
       <div class="col-md-4">
@@ -11,14 +11,15 @@
           <ul>
               <li><%= recipe.title %></li>
               <li><%= recipe.description %></li>
-              <li><%= link_to 'Show', recipe %>
-              <%= link_to 'Edit', edit_recipe_path(recipe) %>
-              <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+              <li><%= link_to 'Show', recipe, :class => "rec-links" %>
+              <%= link_to 'Edit', edit_recipe_path(recipe), :class => "rec-links" %>
+              <%= link_to 'Destroy', recipe, :class => "rec-links", method: :delete, data: { confirm: 'Are you sure?', } %></li>
           </ul>
         </div>
       </div>
     <% end %>
   </div>
+</div>
 <br>
 <div class="row">
 <div class="col-4">

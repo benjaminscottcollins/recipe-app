@@ -1,7 +1,29 @@
 @import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Covered+By+Your+Grace&display=swap');
 
-h1 {
-    padding-bottom: 15px;
+body {
+    background-image: url("background.jpg");
+    background-size: initial;
+    background-repeat: repeat;
+}
+
+.form-group {
+    padding-bottom: 10px;
+}
+
+h1, h2, h3 {
+    font-family: 'Covered By Your Grace', Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.navbar-brand {
+    font-family: 'Covered By Your Grace', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
+
+nav {
+    border-bottom: rgb(0, 100, 158) 2px solid;
 }
 
 img.recipe-show {
@@ -9,22 +31,23 @@ img.recipe-show {
     height: auto;
     align-content: center;
     border-radius: 5pt;
-    box-shadow: 10px 10px 5px #888888;
+    padding-top: 10px;
+    box-shadow: 10px 10px 5px #7badafaf;
 }
 
 .recipe-box {
     height: 500px;
     position: relative;
-    box-shadow: 10px 10px 5px #888888;
-    background: #bdc3c7;
+    box-shadow: 10px 10px 5px #7badafaf;
+    background: #c1d8eb;
     margin-bottom: 20px;
     transition: all ease .5s;
 }
 
 .recipe-box:hover {
     transform: scale(1.02);
-    background: #9ea3a7;
-    box-shadow: 10px 10px 5px #666565;
+    background: #76aac2;
+    box-shadow: 10px 10px 5px #689294cc;
     transition: all ease .5s;
 }
 
@@ -35,29 +58,35 @@ img.recipe-index {
 }
 
 .recipe-box ul {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 20px;
     list-style-type: none;
     position: absolute;
     bottom: 0;
 }
 
 .recipe-box li:first-child {
-    font-size: 36px;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 45px;
     font-style: oblique;
 }
 
-.recipe-box link_to {
-    font-size: 24px;
-    font-weight: lighter;
+.navbar-toggler {
+    background-image: url("arrow_button.png");
+    background-repeat: no-repeat;
+    height: 50px;
+    width:auto;
+    border: none;
+    transition: all ease .75s;
 }
 
-
-.navbar-toggler {
-    transition: all ease .5s;
+.navbar-toggler:hover {
+    transform: scale(1.1);
 }
 
 .navbar-toggler:focus {
-    transform: rotate(90deg);
-    transition: all ease .5s;
+    transform: rotate(180deg);
+    transition: all ease .75s;
 }
 
 .col-4 {
@@ -67,13 +96,48 @@ img.recipe-index {
 }
 
 .links {
+    font-family: 'Archivo Narrow', sans-serif;
+    color: rgb(0, 100, 158);
+    font-size: 1.2rem;
+    font-weight: 900;
+    position: relative;
+    top: 10px;
     transition: all ease .5s;
     text-align: center;
     align-content: center;
 }
 
 .links:hover {
-    font-weight: 600;
+    font-weight: 1200;
+    transform: scale(1.05);
+    transition: all ease .5s;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #666565;
+}
+
+a {
+    transition: all ease .5s;
+    color: rgb(0, 100, 158);
+}
+
+a:hover {
+    font-weight: 1200;
+    transform: scale(1.05);
+    transition: all ease .5s;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #666565;
+}
+
+.rec-links {
+    color: rgb(0, 100, 158);
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition: all ease .5s;
+}
+
+.rec-links:hover {
+    font-weight: 1200;
     transform: scale(1.05);
     transition: all ease .5s;
     text-decoration: none;
@@ -88,5 +152,53 @@ div.image {
 
 .center {
     text-align: center;
+    align-content: center;
 }
 
+#offset {
+    position: relative;
+    left: 32px;
+}
+
+.button {
+    position: relative;
+    top: 12px;
+    bottom: 20px;
+    margin-bottom: 10px;
+    transition: all ease .5s;
+    background-color: whitesmoke;
+    border: 2px solid rgb(70, 150, 197);
+}
+
+.button:hover {
+    transition: all ease .5s;
+    background-color: rgb(70, 150, 197);
+    box-shadow: 2px 2px 1px rgb(102, 102, 102);
+    transform: scale(1.02)
+}
+
+li.nav-item {
+    padding-top: 1rem;
+}
+
+.row {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.navbar-nav li {
+    font-family: 'Archivo Narrow', sans-serif;
+    color: rgb(0, 100, 158);
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition: all ease .5s;
+}
+
+.navbar-nav li:hover {
+    font-weight: 1200;
+    transform: scale(1.02);
+    transform-origin: center;
+    transition: all ease .5s;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #666565;
+}
