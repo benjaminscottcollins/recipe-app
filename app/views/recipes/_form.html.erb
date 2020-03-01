@@ -41,9 +41,11 @@
   <div class="row">
     <div class="col">
       <h3 class="center">Add Ingredients</h3>
-        <%= form.fields_for :ingredients do |ingredient| %>
-          <%= render 'ingredient_fields', f: ingredient %>
-        <% end %>
+        <div class="center">
+          <%= form.fields_for :ingredients do |ingredient| %>
+            <%= render 'ingredient_fields', f: ingredient %>
+          <% end %>
+        </div>
         <div class="links">
         <%= link_to_add_association 'Add Ingredient', form, :ingredients %>
       </div>
@@ -52,9 +54,11 @@
   <div class="row">
     <div class="col">
       <h3 class="center">Add Steps</h3>
-        <%= form.fields_for :steps do |step| %>
-          <%= render 'step_fields', f: step %>
-        <% end %>
+          <div class="center">
+            <%= form.fields_for :steps do |step| %>
+              <%= render 'step_fields', f: step %>
+            <% end %>
+          </div>
         <div class="links">
         <%= link_to_add_association 'Add Step', form, :steps %>
       </div>
