@@ -30,37 +30,47 @@
     <div class="col">
       <div class="form-group, center">
         <%= form.file_field :image, :class => "button" %>
-        <% if @recipe.image? %>
-          <%= image_tag @recipe.image.url, class: "recipe-show" %>
-          <%= form.check_box :remove_image %>
-            Remove Image
-        <% end %>
+        <div class="row>
+          <div class="col center">
+            <% if @recipe.image? %>
+              <%= image_tag @recipe.image.url, class: "recipe-show" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col center">
+            <span class="links">
+                <%= form.check_box :remove_image %>
+                  Remove Image
+              <% end %>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col">
       <h3 class="center">Add Ingredients</h3>
-        <div class="center">
-          <%= form.fields_for :ingredients do |ingredient| %>
-            <%= render 'ingredient_fields', f: ingredient %>
-          <% end %>
-        </div>
-        <div class="links">
-        <%= link_to_add_association 'Add Ingredient', form, :ingredients %>
+      <div class="center">
+        <%= form.fields_for :ingredients do |ingredient| %>
+          <%= render 'ingredient_fields', f: ingredient %>
+        <% end %>
+        <span class="links">
+          <%= link_to_add_association 'Add Ingredient', form, :ingredients %>
+        </span>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col">
       <h3 class="center">Add Steps</h3>
-          <div class="center">
-            <%= form.fields_for :steps do |step| %>
-              <%= render 'step_fields', f: step %>
-            <% end %>
-          </div>
-        <div class="links">
-        <%= link_to_add_association 'Add Step', form, :steps %>
+      <div class="center">
+        <%= form.fields_for :steps do |step| %>
+          <%= render 'step_fields', f: step %>
+        <% end %>
+        <span class="links">
+          <%= link_to_add_association 'Add Step', form, :steps %>
+        </span>
       </div>
     </div>
   </div>
