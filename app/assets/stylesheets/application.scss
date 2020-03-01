@@ -24,6 +24,11 @@ nav {
     border-bottom: rgb(0, 100, 158) 2px solid;
 }
 
+.recipe-image {
+    height: 250px;
+    width: auto;
+}
+
 img.recipe-show {
     width: 400px;
     height: auto;
@@ -31,6 +36,11 @@ img.recipe-show {
     border-radius: 5pt;
     padding-top: 10px;
     box-shadow: 10px 10px 5px #7badafaf;
+}
+
+.ingredients li, .steps li {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
 }
 
 .recipe-box {
@@ -175,28 +185,25 @@ div.image {
     transform: scale(1.02)
 }
 
-li.nav-item {
-    padding-top: 1rem;
-}
-
-.row {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-}
-
-.navbar-nav li {
+.nav-item {
     font-family: 'Archivo Narrow', sans-serif;
     color: rgb(0, 100, 158);
     font-size: 1.2rem;
     font-weight: 900;
     transition: all ease .5s;
+    padding-top: 1rem;
 }
 
-.navbar-nav li:hover {
+.nav-item:hover {
     font-weight: 1200;
     transform: scale(1.02);
     transform-origin: center;
     transition: all ease .5s;
     text-decoration: none;
     text-shadow: 1px 1px 0px #666565;
+}
+
+.row {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
